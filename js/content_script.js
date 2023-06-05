@@ -13,7 +13,7 @@ const injectContentScript = (tab) => {
     const {id, url} = tab;
     let params = getSearchParams(url)
     
-    const query = "give a joke on "+ params
+    const query = "I need a unique joke on "+ params
     console.log('query : '+ query)
     fetch(jokeApiUrl, {
         method: "POST",
