@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./js/jquery-3.7.0.min.js"></script>
+        <script src="./js/index.js"></script>
+        <title>Funny AI</title>
+        <style>
+            .container{
+                min-height: 500px;
+                min-width: 300px;
+            }
+
+            .spinner {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 4px solid #ccc;
+            border-top-color: #333;
+            animation: spin 1s infinite linear;
+            margin: 20px auto;
+            }
+        
+            @keyframes spin {
+            to { transform: rotate(360deg); }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h3>
+                Hello here is a joke to light up your mood 😁
+            </h3>
+            <div class="spinner"></div>
+            <div id="joke" class="joke"> hello </div>
+        </div>
+            
+    </body> 
+    <script src="./js/content_script.js"></script>
+</html>
