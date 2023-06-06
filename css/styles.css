@@ -3,11 +3,34 @@ body{
     padding: 0;
     min-width: 350px;
     min-height: 500px;
-    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
-    background-image: url(../img/cube.webp);
+    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+    /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+    /* background-image: url(../img/cube.webp);
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; */
+
+}
+
+.circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.top-circle {
+    top: -50px;
+    left: 10%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.2));
+}
+
+.bottom-circle {
+    bottom: -100px;
+    left:100%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 }
 
 .container{
@@ -26,16 +49,23 @@ body{
 }
 .container .content{
     color: whitesmoke;
+    font-weight: 300;
     text-align: center;
     transition: 0.5%;
+    
+}
+
+.greeting{
+    font-size: 22px;
+    font-family: Lato, sans-serif;
     text-shadow:
-    -1px -1px 0 grey,
+    -1px -1px 0 rgb(241, 139, 139),
      1px -1px 0 grey,
     -1px  1px 0 grey,
      1px  1px 0 grey;
 }
 
-.spinner {
+/* .spinner {
 width: 40px;
 height: 40px;
 border-radius: 50%;
@@ -47,4 +77,57 @@ margin: 20px auto;
 
 @keyframes spin {
 to { transform: rotate(360deg); }
+} */
+
+
+/* spinner copy right
+ Copyright (c) 2023 by Bilal.Rizwaan (https://codepen.io/Bilal1909/pen/pobgJae) 
+ */
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.line {
+    width: 5px;
+    height:50px;
+    margin: 5px;
+    border-radius: 25px;
+    animation: line 0.8s linear infinite;
+    background: linear-gradient(45deg, #4cd8ff 0%, #000955 100%);
+}
+.line:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.line:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.line:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.line:nth-child(5) {
+    animation-delay: 0.4s;
+}
+.line:nth-child(6) {
+    animation-delay: 0.5s;
+}
+.line:nth-child(7) {
+    animation-delay: 0.6s;
+}
+.line:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+@keyframes line {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+  

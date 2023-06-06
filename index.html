@@ -4,22 +4,37 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
         <script src="./js/jquery-3.7.0.min.js"></script>
         <script src="./js/index.js"></script>
         <title>Funny AI</title>
-        <link rel="stylesheet" type="text/css" href="./css/styles.css">
     </head>
     <body>
+        <div class="circle top-circle"></div>
+        <div class="circle bottom-circle"></div>
         <div class="container">
             <div class="content">
                 <h3>
-                    Hello here is a joke to light up your mood 😁
+                <div class= "greeting"></div>
+                <p>Here is a joke to light up your mood 😁</p>
                 </h3>
-                <div class="spinner"></div>
+                <!-- <div class="spinner"></div> -->
+                <div class="spinner">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
                 <div id="joke" class="joke"> hello </div>
             </div>
         </div>
-            
+         
     </body> 
     <script src="./js/content_script.js"></script>
 </html>
