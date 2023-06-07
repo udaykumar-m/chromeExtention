@@ -14,4 +14,6 @@ $(document).ready(function() {
       greeting = 'Good Night';
     }
     $('.greeting').text(greeting);
+
+    
 });

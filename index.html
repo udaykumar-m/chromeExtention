@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="./css/styles.css">
+        <script src="./js/popup.js"></script>
         <script src="./js/jquery-3.7.0.min.js"></script>
         <script src="./js/index.js"></script>
         <title>Funny AI</title>
@@ -31,10 +32,12 @@
                     <div class="line"></div>
                     <div class="line"></div>
                 </div>
-                <div id="joke" class="joke"> hello </div>
+                <div id="joke" class="joke">  </div>
+                <div id="selected" class="selected">  </div>
             </div>
         </div>
          
     </body> 
-    <script src="./js/content_script.js"></script>
+    <script type="module" src="./js/getAPICall.js"></script>
+    <script type="module" src="./js/content_script.js"></script>
 </html>
