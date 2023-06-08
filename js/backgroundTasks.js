@@ -3,9 +3,12 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
         const selectedText = message.data;
         console.log("Selected text:", selectedText);
         
-        chrome.runtime.sendMessage({
-            action: "selectedText",
+        setTimeout(function() {
+            // Code to send or receive messages after the delay
+            chrome.runtime.sendMessage({
+                action: "selectedText",
             data: selectedText,
-        });
+            });
+        }, 2000);
     }
 });

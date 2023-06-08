@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Funny AI",
+  "name": "Funny AI - content creator",
   "version": "1.0",
   "description": "AI extenstion that helps you laugh, generate captions, write tweets and more..",
   "permissions": [

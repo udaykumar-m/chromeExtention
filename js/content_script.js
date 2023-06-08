@@ -24,9 +24,6 @@ const getSelectedText = () => {
 const injectContentScript = async (tab) => {
     const {id, url} = tab;
     let params = getSearchParams(url)
-    let selectText = await getSelectedText()
-    
-    console.log('return :'+ selectText)
     const query = "I need a unique joke on "+ params
     console.log('query : '+ query)
     
@@ -36,9 +33,14 @@ const injectContentScript = async (tab) => {
     $('.spinner').hide('100');
     $('.joke').show(400);
 
-    if (selectText) 
-    document.getElementById('selected').innerHTML = "The selected text is : \""+ selectText ;
-
+    let selectText = await getSelectedText()
+    
+    console.log('return :'+ selectText)
+    if (selectText){
+        if (selectText.length > 12)
+            selectText = selectText.substring(0, 12) + "...";
+        document.getElementById('selected').innerHTML = `<br>The selected text is <b>"${selectText}"</b>. You can select below actions for that text` ;
+    }
 }
 
 const getCurrentTab = async () => {

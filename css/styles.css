@@ -142,11 +142,19 @@ to { transform: rotate(360deg); }
     font-size: 14px;
 }
 
+.selected{
+    font-size: 13px;
+}
+
 .text-box{
     max-width: 250px;
     font-size: 15px;
-    list-style-type: none;
     border-top: 2px solid #a9c4e7;
+}
+
+.text-box a{
+    list-style-type: none;
+    text-decoration: none;
 }
 
 .text-box li{
