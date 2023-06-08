@@ -36,6 +36,9 @@ const injectContentScript = async (tab) => {
     $('.spinner').hide('100');
     $('.joke').show(400);
 
+    if (selectText) 
+    document.getElementById('selected').innerHTML = "The selected text is : \""+ selectText ;
+
 }
 
 const getCurrentTab = async () => {

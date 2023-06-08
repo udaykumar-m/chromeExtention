@@ -14,7 +14,9 @@ export const makeAPICall = async ( apiKey, apiURL, query ) => {
         }).then(response => response.json())
         .then(data => {
             console.log(data) 
-            resolve(data.choices[0].text.replace(/\n/g, '<br>'));
+            data = data.choices[0].text.replace(/\n/, "")
+            data = data.replace(/A:/g, "\nA:")
+            resolve(data.replace(/\n/g, '<br>'));
         })
         .catch(error => {
             reject(error);
