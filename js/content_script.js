@@ -29,17 +29,18 @@ const injectContentScript = async (tab) => {
     
     const generatedText = await makeAPICall(apiKey, "https://api.openai.com/v1/completions", query) ;
     console.log(generatedText)
-    document.getElementById('joke').innerHTML = generatedText ;
+    document.getElementById('apiResult').innerHTML = generatedText ;
     $('.spinner').hide('100');
-    $('.joke').show(400);
+    $('.text').show(400);
 
     let selectText = await getSelectedText()
+    localStorage.setItem("selectedValue", selectText);
     
     console.log('return :'+ selectText)
     if (selectText){
         if (selectText.length > 12)
             selectText = selectText.substring(0, 12) + "...";
-        document.getElementById('selected').innerHTML = `<br>The selected text is <b>"${selectText}"</b>. You can select below actions for that text` ;
+        document.getElementById('selected').innerHTML = `<br>The selected text is <b>"${selectText}"</b>. You can either select below actions for that text (or) Enter new in next page` ;
     }
 }
 

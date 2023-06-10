@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Haiiiii</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/styles.css">
+        <script src="../js/jquery-3.7.0.min.js"></script>
+        <title>Funny AI</title>
+    </head>
+    <body>
+        <div class="circle top-circle"></div>
+        <div class="circle bottom-circle"></div>
+        <div class="above-conatiner">
+            <div class="navbar">
+                <a href="../index.html" class="home">
+                    <img src="../img/left-arrow (1).png" alt="Back" height="22px">
+                    <span>Home</span>
+                </a>
+                <h2 class="title"></h2>
+            </div>
+            <div class="input-box">
+                <input type="text" id="myInput" value="" placeholder="Enter text to find out">
+                <button>GO</button>
+            </div>
+            <div class="container">
+                <div class="content">
+                    <!-- <div class="spinner"></div> -->
+                    <div class="spinner">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="text mu">
+                        <div id="apiResult" class="apiResult meaning">  </div> <br>
+                        <div id="usage" class="apiResult usage">  </div> <br>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </body> 
+    <script type="module" src="../js/content_call.js"></script>
+    <script type="module" src="../js/getAPICall.js"></script>
 </html>

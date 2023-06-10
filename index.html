@@ -13,37 +13,38 @@
     <body>
         <div class="circle top-circle"></div>
         <div class="circle bottom-circle"></div>
-        <div class="container">
-            <div class="content">
-                <h3>
-                <div class= "greeting"></div>
-                <p>Here is a joke to light up your mood 😁</p>
-                </h3>
-                <!-- <div class="spinner"></div> -->
-                <div class="spinner">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-                <div class="text">
-                    <div id="joke" class="joke">  </div> <br>
-                </div>
-                <div class="text-box">
-                <div id="selected" class="selected">  </div>
-                    <a href="./navigations/meaning.html"><li>Meaning and usage</li></a>
-                    <a href="./navigations/meaning.html"><li>Instagram Caption</li></a>
-                    <a href="./navigations/meaning.html"><li>Generate a Tweet</li></a>
+        <div class="above-container">
+            <div class="container">
+                <div class="content">
+                    <h3>
+                    <div class= "greeting"></div>
+                    <p>Here is a joke to light up your mood 😁</p>
+                    </h3>
+                    <!-- <div class="spinner"></div> -->
+                    <div class="spinner">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="text">
+                        <div id="apiResult" class="apiResult">  </div> <br>
+                    </div>
+                    <div class="text-box">
+                    <div id="selected" class="selected">  </div>
+                        <a href="./navigations/meaning.html?title=Meaning%20and%20Usage"><li>Meaning and usage</li></a>
+                        <a href="./navigations/meaning.html?title=Instagram%20Caption"><li>Instagram Caption</li></a>
+                        <a href="./navigations/meaning.html?title=Generate%20a%20Tweet"><li>Generate a Tweet</li></a>
+                    </div>
                 </div>
             </div>
         </div>
-         
     </body> 
     <script type="module" src="./js/getAPICall.js"></script>
     <script type="module" src="./js/content_script.js"></script>

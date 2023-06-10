@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.joke').hide();
+    $('.text').hide();
     $('.spinner').hide();
     $('.spinner').show(300);
     var currentHour = new Date().getHours();
