@@ -280,16 +280,20 @@ input::placeholder {
     text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
 }
 
-.mu{
-    margin-top: 150px;
+.mu{ 
+    position: relative;
+    z-index: 999;
+    margin-top: 100px;
+    max-height: 300px;
+    text-align: left;
 }
 
 .meaning{
-    font: 13px 'lucida sans', 'trebuchet MS', 'Tahoma';
-    text-align: left;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .usage{
-    font:italic 13px 'lucida sans', 'trebuchet MS', 'Tahoma';
-    text-align: left;
+    font-style: italic;
+    font-size: 16px;
 }
