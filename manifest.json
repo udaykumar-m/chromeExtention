@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Funny AI - content creator",
+  "name": "AI pal",
   "version": "1.0",
   "description": "AI extenstion that helps you laugh, generate captions, write tweets and more..",
   "permissions": [
@@ -8,6 +8,9 @@
     "scripting",
     "activeTab"
   ],
+  "icons": {
+    "16": "img/icon16.png"
+  },
   "host_permissions": ["<all_urls>"],
   "action": {
     "default_popup": "index.html"
