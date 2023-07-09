@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "AI pal",
   "version": "1.0",
-  "description": "AI extenstion that helps you laugh, generate captions, write tweets and more..",
+  "description": "Unleash the power of an AI-driven Chrome extension that helps you generate jokes, captions, write tweets and more..",
   "permissions": [
     "contextMenus",
     "scripting",
