@@ -1,5 +1,5 @@
 import { makeAPICall } from "./getAPICall.js";
-const apiKey = "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";
+import { apiKey } from "./APIKey.js";
 
 
 const urlParams = new URLSearchParams(window.location.search);

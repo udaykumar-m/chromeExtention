@@ -204,6 +204,7 @@ to { transform: rotate(360deg); }
 }
 
 .home{
+    margin-left: 15px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -220,7 +221,7 @@ to { transform: rotate(360deg); }
     justify-content: center;
     text-align: center;
     margin-top: 16px;
-    margin-left: 30px;
+    margin-left: 50px;
     font-size: 20px;
     text-shadow:
     -1px -1px 0 rgb(241, 139, 139),

@@ -1,10 +1,9 @@
 import { makeAPICall } from "./getAPICall.js";
-const apiKey = "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";
+import { apiKey } from "./APIKey.js";
 
 const getSearchParams = (url) =>{
     const { searchParams } = new URL(url);
     const q = searchParams.get('q');
-    console.log('hihi')
     console.log(q);
     return q != null ? q : ''
 }
@@ -25,7 +24,6 @@ const injectContentScript = async (tab) => {
     const {id, url} = tab;
     let params = getSearchParams(url)
     const query = "I need a unique joke on "+ params
-    console.log('query : '+ query)
     
     const generatedText = await makeAPICall(apiKey, "https://api.openai.com/v1/completions", query) ;
     console.log(generatedText)
