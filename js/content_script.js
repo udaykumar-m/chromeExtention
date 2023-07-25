@@ -1,5 +1,5 @@
 import { makeAPICall } from "./getAPICall.js";
-import { apiKey } from "./APIKey.js";
+import keyData from "./APIKey.js";
 
 const getSearchParams = (url) =>{
     const { searchParams } = new URL(url);
@@ -25,7 +25,7 @@ const injectContentScript = async (tab) => {
     let params = getSearchParams(url)
     const query = "I need a unique joke on "+ params
     
-    const generatedText = await makeAPICall(apiKey, "https://api.openai.com/v1/completions", query) ;
+    const generatedText = await makeAPICall(keyData.apiKey, "https://api.openai.com/v1/completions", query) ;
     console.log(generatedText)
     document.getElementById('apiResult').innerHTML = generatedText ;
     $('.spinner').hide('100');
