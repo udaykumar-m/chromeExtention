@@ -21,11 +21,9 @@ const getSelectedText = () => {
 };
 
 const injectContentScript = async (tab) => {
-    const {id, url} = tab;
-    let params = getSearchParams(url)
-    const query = "I need a unique joke on "+ params
+    const query = "Tell me a funny joke that I haven't heard before"
     
-    const generatedText = await makeAPICall(keyData.apiKey, "https://api.openai.com/v1/completions", query) ;
+    const generatedText = await makeAPICall(keyData.apiKey, "https://api.openai.com/v1/chat/completions", query) ;
     console.log(generatedText)
     document.getElementById('apiResult').innerHTML = generatedText ;
     $('.spinner').hide('100');

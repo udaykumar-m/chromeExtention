@@ -22,12 +22,12 @@ const getResult = async (param) =>{
         query = `Compose a concise tweet about "${param}"`
 
     console.log(query)
-    let generatedText = await makeAPICall(keyData.apiKey, "https://api.openai.com/v1/completions", query) ;
+    let generatedText = await makeAPICall(keyData.apiKey, "https://api.openai.com/v1/chat/completions", query) ;
     console.log(generatedText)
     document.getElementById('meaning').innerHTML = generatedText ;
     if (title === 'Meaning and Usage') {
         query = `concise sentence using the word ${param}`
-        generatedText = await makeAPICall(keyData.apiKey, "https://api.openai.com/v1/completions", query) ;
+        generatedText = await makeAPICall(keyData.apiKey, "https://api.openai.com/v1/chat/completions", query) ;
         console.log(generatedText)
         generatedText = `<b>${param}</b> usage : `+ generatedText.replace(/<br>/g, "");
         document.getElementById('usage').innerHTML = generatedText ;

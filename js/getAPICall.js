@@ -6,15 +6,15 @@ export const makeAPICall = async ( apiKey, apiURL, query ) => {
             "Authorization": `Bearer ${apiKey}`
         },
         body: JSON.stringify({
-            "model": "text-davinci-003",
-            "prompt": query, 
+            "model": "gpt-3.5-turbo",
+            "messages": [{"role": "user", "content":query}], 
             "max_tokens": 100,
             "temperature": 1,
         })
         }).then(response => response.json())
         .then(data => {
             console.log(data) 
-            data = data.choices[0].text.replace(/\n/, "")
+            data = data.choices[0].message.content.replace(/\n/, "")
             data = data.replace(/A:/g, "\nA:")
             resolve(data.replace(/\n/g, '<br>'));
         })
